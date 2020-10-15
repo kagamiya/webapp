@@ -9,7 +9,9 @@ default: &default
 development:
   <<: *default
   database: webapp_development
-
+  host: db
+  
 test:
   <<: *default
   database: webapp_test
+  host: db
