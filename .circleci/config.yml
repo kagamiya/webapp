@@ -12,8 +12,8 @@ executors:
       - image: circleci/mysql:5.7 
         environment:  
           MYSQL_DB: webapp_test  
-          MYSQL_ROOT_USER: root
-          MYSQL_ROOT_PASSWORD: root
+          MYSQL_USER: root
+          MYSQL_PASSWORD: root
 
 commands:  
   setup:  
@@ -66,7 +66,7 @@ jobs:
       - setup  
       - run:  
           name: Wait for DB  
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m  
+          command: dockerize -wait tcp://localhost:5432 -timeout 0.5m  
 
       - run:  
           name: Database setup  
