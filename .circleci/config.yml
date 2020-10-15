@@ -11,9 +11,9 @@ executors:
           BUNDLER_VERSION: 2.1.4
       - image: circleci/mysql:5.7 
         environment:  
-          POSTGRES_DB: webapp_test  
-          POSTGRES_USER: root  
-          POSTGRES_PASSWORD: root  
+          MYSQL_DB: webapp_test  
+          MYSQL_ROOT_USER: root
+          MYSQL_ROOT_PASSWORD: root
 
 commands:  
   setup:  
