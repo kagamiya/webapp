@@ -10,12 +10,13 @@ executors:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
           DB_USERNAME: 'root'
-          DB_PASSWORD: ''
+          DB_PASSWORD: 'root'
       - image: circleci/mysql:5.7 
         environment:
           MYSQL_DATABASE: 'wepapp_test'
+          MYSQL_ROOT_PASSWORD: 'root'
           MYSQL_USER: 'root'
-          MYSQL_PASSWORD: ''
+          MYSQL_PASSWORD: 'root'
 
 commands:  
   setup:  
