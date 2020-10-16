@@ -16,7 +16,7 @@ executors:
           MYSQL_DATABASE: 'wepapp_test'
           # MYSQL_USER: 'kagamiya'
           # MYSQL_PASSWORD: 'kagamiya'
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
 
 commands:  
   setup:  
