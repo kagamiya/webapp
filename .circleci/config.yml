@@ -69,7 +69,7 @@ jobs:
       - setup  
       - run:  
           name: Wait for DB  
-          command: dockerize -wait tcp://localhost:3306 -timeout 100s  
+          command: dockerize -wait tcp://localhost:3306 -timeout 90s  
 
       - run:  
           name: Database setup  
