@@ -9,13 +9,14 @@ executors:
           BUNDLER_VERSION: 2.1.4
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
-          DB_USERNAME: 'kagamiya'
-          DB_PASSWORD: 'kagamiya'
+          DB_USERNAME: 'root'
+          DB_PASSWORD: ''
       - image: circleci/mysql:5.7 
         environment:
           MYSQL_DATABASE: 'wepapp_test'
-          MYSQL_USER: 'kagamiya'
-          MYSQL_PASSWORD: 'kagamiya'
+          # MYSQL_USER: 'kagamiya'
+          # MYSQL_PASSWORD: 'kagamiya'
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
 
 commands:  
   setup:  
